@@ -40,8 +40,11 @@
 			clear: both; 
 			margin-top: 10px; 
 		}
-        
-        /* NUOVO CSS PER I PULSANTI E LE SCHEDE */
+		.tab-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: -1px; /* Mantiene lo stile precedente per allinearsi al bordo del contenuto */
+        }
         .tab-button {
             background-color: #f1f1f1;
             border: none;
@@ -64,7 +67,6 @@
             padding: 20px;
             margin-top: -1px; 
         }
-        /* Regola per nascondere i contenuti non selezionati */
         .hidden {
             display: none;
         }
@@ -72,12 +74,13 @@
 </head>
 <body>
     
-    <div style="margin-bottom: -1px;">
-        <button class="tab-button active" onclick="openTutorial(event, 'Ryujinx')">Ryujinx Canary</button>
-        <button class="tab-button" onclick="openTutorial(event, 'Eden')">Eden with LAN</button>
-        <button class="tab-button" onclick="openTutorial(event, 'TransferSave')">TRANSFER SAVE</button>
-		<button class="tab-button" onclick="openTutorial(event, 'Troubleshooting')">TROUBLESHOOTING</button>
-    </div>
+	<div class="tab-container">
+		        <button class="tab-button active" onclick="openTutorial(event, 'Ryujinx')">Ryujinx Canary</button>
+		        <button class="tab-button" onclick="openTutorial(event, 'Eden')">Eden with LAN</button>
+		        <button class="tab-button" onclick="openTutorial(event, 'TransferSave')">TRANSFER SAVE</button>
+		        <button class="tab-button" onclick="openTutorial(event, 'Troubleshooting')">TROUBLESHOOTING</button>
+		    
+	</div>
 
     <div id="Ryujinx" class="tab-content">
         <h1>HOW TO INSTALL RYUJINX CANARY - RYUBING</h1>
