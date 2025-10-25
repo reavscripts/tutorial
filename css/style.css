@@ -87,10 +87,11 @@ body {
 			padding: 0 10px;
 		}
 
-        .tab-container {
-            flex-direction: column;
-            margin-bottom: 10px;
-        }
+		.tab-container {
+				flex-direction: column;
+				margin-bottom: 10px;
+				width: 100%; 
+			}
         
         .tab-button {
             width: 100%; 
