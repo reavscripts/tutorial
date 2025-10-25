@@ -1,138 +1,139 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    /* Rimuovi max-width e padding per far sì che lo sfondo copra l'intera finestra */
+    /* max-width: 800px; <--- RIMOSSO O IMPOSTATO A 100% SE VUOI CHE IL CONTENUTO SIA CENTRATO */
+    /* margin: 40px auto; <--- RIMOSSO TEMPORANEAMENTE */
+    /* padding: 20px; <--- RIMOSSO TEMPORANEAMENTE */
+    width: 100%; /* Assicura la piena larghezza */
+    min-height: 100vh; /* Assicura che lo sfondo copra almeno l'intera altezza della finestra */
+
+    /* === NUOVE REGOLE PER L'IMMAGINE DI SFONDO === */
+    background-image: url('Image/background.jpg'); /* 1. Inserisci il percorso del file */
+    background-repeat: no-repeat; /* 2. Evita la ripetizione */
+    background-size: cover; /* 3. Copre l'intera area senza distorcere */
+    background-attachment: fixed; /* 4. Mantiene lo sfondo fisso durante lo scroll */
+    background-position: center center; /* 5. Centra l'immagine nello sfondo */
+    /* ============================================== */
+}
+
+/* Se vuoi che il contenuto rimanga centrato e leggibile */
+#contenuto-principale {
     max-width: 800px;
-    margin: 40px auto;
+    margin: 40px auto; /* Ri-applica il centraggio e il margine qui */
     padding: 20px;
+    /* Aggiungi uno sfondo semi-trasparente per migliorare la leggibilità sopra l'immagine */
+    background-color: rgba(255, 255, 255, 0.85); /* Sfondo bianco semi-trasparente */
+    border-radius: 8px; /* Angoli arrotondati per estetica */
 }
-h1 { color: #333; }
-.step {
-    margin-bottom: 20px;
-    padding: 15px;
-    /* BLU cambiato in VERDE (accento 1) */
-    border-left: 5px solid #4CAF50; 
-    background-color: #f6f8fa;
-    overflow: auto;
-}
-code { background-color: #eee; padding: 2px 4px; border-radius: 4px; }
-
-.step img {
-    max-width: 40%;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    float: left;
-    margin-right: 15px;
-    margin-bottom: 10px;
-}
-
-.large-image {
-    max-width: 80% !important;
-    float: none !important;
-    display: block;
-    margin: 20px auto !important;
-}
-.image-container {
-    text-align: left;
-    margin: 0;
-    float: left;
-}
-.clear-float {
-    clear: both;
-    margin-top: 10px;
-}
-
-.tab-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: -1px;
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-}
-.tab-button {
-    background-color: #ccc;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-right: 5px;
-    font-size: 16px;
-    border-radius: 5px 5px 0 0;
-    transition: background-color 0.3s;
-    flex-grow: 1;
-    min-width: 0;
-    text-align: center;
-    white-space: nowrap;
-}
-.tab-button:hover {
-    background-color: #ddd;
-}
-.tab-button.active {
-    /* BLU cambiato in VERDE (accento 2) */
-    background-color: #4CAF50; 
-    color: white;
-}
-.tab-content {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-top: -1px;
-}
-.hidden {
-    display: none;
-}
-.header-logo-container {
-    width: 100%;
-    text-align: center;
-    padding-top: 0px;
-    padding-bottom: 20px;
-}
-
-.logo-image {
-    display: inline-block;
-    width: 350px;
-    height: auto;
-}
-.header-logo-container {
-    width: 100%;
-    text-align: center;
-    padding-top: 0px;
-    padding-bottom: 20px;
-}
-
-@media (max-width: 600px) {
-    body {
-        max-width: none;
-        width: 100%;
-        margin: 10px 0;
-        padding: 0 10px;
+    h1 { color: #333; }
+    .step { 
+        margin-bottom: 20px; 
+        padding: 15px; 
+        border-left: 5px solid #0070f3; 
+        background-color: #f6f8fa; 
+        overflow: auto; 
     }
+    code { background-color: #eee; padding: 2px 4px; border-radius: 4px; }
 
-    .tab-container {
-        flex-direction: column;
+    .step img { 
+        max-width: 40%; 
+        height: auto; 
+        border: 1px solid #ccc; 
+        border-radius: 4px; 
+        float: left; 
+        margin-right: 15px; 
         margin-bottom: 10px;
-        width: 100%;
+    }
+    
+    .large-image {
+        max-width: 80% !important; 
+        float: none !important;     
+        display: block;             
+        margin: 20px auto !important; 
+    }
+    .image-container { 
+        text-align: left; 
+        margin: 0;
+        float: left;
+    }
+    .clear-float {
+        clear: both; 
+        margin-top: 10px; 
     }
         
-    .tab-button {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 5px;
-        border-radius: 5px;
+	.tab-container {
+		display: flex;
+		justify-content: center; 
+		margin-bottom: -1px; 
+		max-width: fit-content; 
+		margin-left: auto;    
+		margin-right: auto; 
+	}
+	.tab-button {
+		background-color: #ccc;
+		border: none;
+		padding: 10px 20px;
+		cursor: pointer;
+		margin-right: 5px;
+		font-size: 16px;
+		border-radius: 5px 5px 0 0;
+		transition: background-color 0.3s;
+		flex-grow: 1; 
+		min-width: 0; 
+		text-align: center;
+		white-space: nowrap;
+	}
+    .tab-button:hover {
+        background-color: #ddd;
     }
-        
-    .step img,
-    .large-image,
-    .image-container {
-        float: none !important;
-        max-width: 100% !important;
-        width: 100%;
-        height: auto;
-        margin: 10px 0 10px 0 !important;
-        display: block;
+    .tab-button.active {
+        background-color: #0070f3;
+        color: white;
     }
-        
-    .image-container {
-        text-align: center;
+    .tab-content {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-top: -1px; 
     }
+    .hidden {
+        display: none;
+    }
+
+	@media (max-width: 600px) {
+		body {
+			max-width: none; 
+			width: 100%;
+			margin: 10px 0;
+			padding: 0 10px;
+		}
+
+	.tab-container {
+			flex-direction: column;
+			margin-bottom: 10px;
+			width: 100%; 
+		}
         
-}
+        .tab-button {
+            width: 100%; 
+            margin-right: 0;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+        
+        .step img,
+        .large-image,
+        .image-container {
+            float: none !important;
+            max-width: 100% !important;
+            width: 100%;
+            height: auto;
+            margin: 10px 0 10px 0 !important;
+            display: block;
+        }
+        
+        .image-container {
+             text-align: center;
+        }
+        
+    }
