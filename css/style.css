@@ -81,8 +81,8 @@ body {
 	.header-logo-container {
 		width: 100%;
 		text-align: center;
-		padding-top: 10px;
-		padding-bottom: 30px;
+		padding-top: 0px;
+		padding-bottom: 20px;
 	}
 
 	.logo-image {
@@ -93,7 +93,7 @@ body {
 	.header-logo-container {
 		width: 100%;
 		text-align: center;
-		padding-top: 5px;
+		padding-top: 0px;
 		padding-bottom: 20px;
 	}
 
