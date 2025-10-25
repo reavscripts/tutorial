@@ -15,287 +15,289 @@
 
 </head>
 <body>
-	<div class="tab-container">
-		    <button class="tab-button active" onclick="openTutorial(event, 'Ryujinx')">Ryujinx Canary</button>
-		    <button class="tab-button" onclick="openTutorial(event, 'Eden')">Eden with LAN</button>
-		    <button class="tab-button" onclick="openTutorial(event, 'TransferSave')">TRANSFER SAVE</button>
-		    <button class="tab-button" onclick="openTutorial(event, 'Troubleshooting')">TROUBLESHOOTING</button>
-		  
-	</div>
+	<div id="contenuto-principale">
+		<div class="tab-container">
+				<button class="tab-button active" onclick="openTutorial(event, 'Ryujinx')">Ryujinx Canary</button>
+				<button class="tab-button" onclick="openTutorial(event, 'Eden')">Eden with LAN</button>
+				<button class="tab-button" onclick="openTutorial(event, 'TransferSave')">TRANSFER SAVE</button>
+				<button class="tab-button" onclick="openTutorial(event, 'Troubleshooting')">TROUBLESHOOTING</button>
+			  
+		</div>
 
-    <div id="Ryujinx" class="tab-content">
-        <h1>HOW TO INSTALL RYUJINX CANARY - RYUBING</h1>
-        <p>Follow this steps to install and play.</p>
+		<div id="Ryujinx" class="tab-content">
+			<h1>HOW TO INSTALL RYUJINX CANARY - RYUBING</h1>
+			<p>Follow this steps to install and play.</p>
 
-        <div class="step">
-            <h2>Step 1: Download the emulator</h2>
-            <p><a href="https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/1.3.192/ryujinx-canary-1.3.192-win_x64.zip">Ryujinx Canary - Ryubing</a></p>
-        </div>
+			<div class="step">
+				<h2>Step 1: Download the emulator</h2>
+				<p><a href="https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/1.3.192/ryujinx-canary-1.3.192-win_x64.zip">Ryujinx Canary - Ryubing</a></p>
+			</div>
 
-        <div class="step">
-            <h2>Step 2: Unzip</h2>
-            <p>Open the archive and place it anywhere on your computer</p>
-        </div>
+			<div class="step">
+				<h2>Step 2: Unzip</h2>
+				<p>Open the archive and place it anywhere on your computer</p>
+			</div>
 
-        <div class="step">
-            <h2>Step 3: Open the application and install Firmware and ProdsKey</h2>
-            <p><a href="https://files.prodkeys.net/ProdKeys.NET-v20.5.0.zip">ProdsKey 20.5.0</a></p>
-            <p>From ryujinx application: <strong>Action > Install Key > Install .Keys</strong></p>
-            <p><a href="https://github.com/THZoria/NX_Firmware/releases/download/20.5.0/Firmware.20.5.0.zip">Firmware 20.5.0</a></p>
-            <p class="clear-float">From ryujinx application: <strong>Action > Install Firmware > Install Zip or Folder</strong></p>
-                <div class="image-container">
-                    <img src="Images/prodsandfirm.png" alt="prodsandfirm.png" class="large-image">
-                </div>
-        </div>
-         
-        <div class="step">
-            <h2>Step 4: Enable ryuLDN</h2>
-            <p>From ryujinx application: <strong>Option > Setting > Network</strong></p>
-            <p>Mode ryuLDN</p>
-            <p>Enable Guest Internet Access/LAN mode </p>
-            <p>Network Interface: (Select your network Ethernet/Wifi etc) </p>
-            <p class="clear-float">Press OK to save setting</p>
-                <div class="image-container">
-                    <img src="Images/network.png" alt="network.png" class="large-image">
-                </div>
-        </div>
-        
-        <div class="step">
-            <h2>Step 5: Add ROM Directory</h2>
-            <p>From ryujinx application: <strong>Options > Settings > Interface</strong></p>
-            <p>In the first box add the directory where your ROMs are located</p>
-            <p class="clear-float">Press OK to save setting</p>
-                <div class="image-container">
-                    <img src="Images/gamedirectory.png" alt="gamedirectory.png" class="large-image">
-                </div>
-        </div>
-        <div class="step">
-            <h2>Now you can start the emulator</h2>
-            <p><strong>NB. ryuLDN emulate a local LAN, you cannot use internet feature like Ranked Battle or Mystery Gift</strong></p>
-            <p class="clear-float"><strong>Use private battle > LOCAL for pvp</strong></p>
-                <div class="image-container">
-                    <img src="Images/privatebattle.png" alt="privatebattle.png">
-                </div>
-				<br>
-            <p class="clear-float"><strong>Use Link Trade to trade Pokemons</strong></p>
-				<br>
-                <div class="image-container">
-                    <img src="Images/linktrade.png" alt="linktrade.png">
-                </div>
-        </div>
-    </div>
-
-
-    <div id="Eden" class="tab-content hidden">
-        <h1>HOW TO INSTALL EDEN WITH LAN FEATURES</h1>
-        <p>Follow this steps to install and play.</p>
-
-        <div class="step">
-            <h2>Step 1: Download the emulator</h2>
-            <p><a href="https://github.com/Eden-CI/PR/releases/download/2835-8ae0ec35bd/Eden-Windows-2835-8ae0ec35bd-amd64-clang-standard.zip">Eden - Clang</a></p>
-        </div>
-
-        <div class="step">
-            <h2>Step 2: Unzip</h2>
-            <p>Open the archive and place it anywhere on your computer</p>
-        </div>
-
-        <div class="step">
-            <h2>Step 3: Open the application and install Firmware and ProdsKey</h2>
-            <p><a href="https://files.prodkeys.net/ProdKeys.NET-v20.5.0.zip">ProdsKey 20.5.0</a></p>
-            <p>From Eden application: <strong>Tool > Install Decryption Keys</strong></p>
-            <p><a href="https://github.com/THZoria/NX_Firmware/releases/download/20.5.0/Firmware.20.5.0.zip">Firmware 20.5.0</a></p>
-            <p class="clear-float">From Eden application: <strong>Tool > Install Firmware > Install Zip or Folder</strong></p>
-                <div class="image-container">
-                    <img src="Images/edenprods.png" alt="edenprods.png">
-                </div>
-        </div>
-         
-        <div class="step">
-            <h2>Step 4: check default Network Interface</h2>
-            <p>From eden application: <strong>Emulation > Configure > System > Network</strong></p>
-            <p>Be sure its selected the network interface you are using (Ethernet or Wifi or extra adapter)</p>
-            <p>Keep disabled Enable Airplane Mode</p>
-            <p class="clear-float">Press OK to save setting</p>
-                <div class="image-container">
-                    <img src="Images/edennetwork.png" alt="edennetwork.png">
-                </div>
-        </div>
-        
-        <div class="step">
-            <h2>Step 5: Add ROM Directory</h2>
-            <p>From Eden application: Double click on Add New Game Directory</p>
-            <p>Select the directory where your ROMs are located</p>
-            <p class="clear-float">Press OK to save setting</p>
-                <div class="image-container">
-                    <img src="Images/addnewdir.png" alt="addnewdir.png" class="large-image">
-                </div>
-        </div>
-        <div class="step">
-            <h2>Now you can start the emulator</h2>
-            <p><strong>NB. Eden emulate a local LAN, you cannot use internet feature like Ranked Battle or Mystery Gift</strong></p>
-            <p class="clear-float"><strong>Use private battle > LOCAL for pvp</strong></p>
-                <div class="image-container">
-                    <img src="Images/privatebattle.png" alt="privatebattle.png">
-                </div>
-				<br>
-            <p class="clear-float"><strong>Use Link Trade to trade Pokemons</strong></p>
-				<br>
-                <div class="image-container">
-                    <img src="Images/linktrade.png" alt="linktrade.png">
-                </div>
-        </div>
-    </div>
-
-	<div id="TransferSave" class="tab-content hidden">
-		<h1>TRANSFER SAVE DATA BETWEEN EMULATORS</h1>
-		<p>This section explains how to transfer save files between different emulators (Ryujinx, Eden, etc.) using the game's local save file.</p>
-
-		<div class="step">
-			<h2>1. Estrazione del Salvataggio (Emulatore di Partenza)</h2>
-			<ol>
-				<li>In the game list, <strong>Right Click</strong> on the game title.</li>
-				<li>Select <strong>"Open Save Data Location"</strong> (or similar).</li>
-				<li>The save location folder will open. You should see a file named <code>main</code>.</li>
-				<li><strong>Copy</strong> this <code>main</code> file.</li>
-			</ol>
+			<div class="step">
+				<h2>Step 3: Open the application and install Firmware and ProdsKey</h2>
+				<p><a href="https://files.prodkeys.net/ProdKeys.NET-v20.5.0.zip">ProdsKey 20.5.0</a></p>
+				<p>From ryujinx application: <strong>Action > Install Key > Install .Keys</strong></p>
+				<p><a href="https://github.com/THZoria/NX_Firmware/releases/download/20.5.0/Firmware.20.5.0.zip">Firmware 20.5.0</a></p>
+				<p class="clear-float">From ryujinx application: <strong>Action > Install Firmware > Install Zip or Folder</strong></p>
+					<div class="image-container">
+						<img src="Images/prodsandfirm.png" alt="prodsandfirm.png" class="large-image">
+					</div>
+			</div>
+			 
+			<div class="step">
+				<h2>Step 4: Enable ryuLDN</h2>
+				<p>From ryujinx application: <strong>Option > Setting > Network</strong></p>
+				<p>Mode ryuLDN</p>
+				<p>Enable Guest Internet Access/LAN mode </p>
+				<p>Network Interface: (Select your network Ethernet/Wifi etc) </p>
+				<p class="clear-float">Press OK to save setting</p>
+					<div class="image-container">
+						<img src="Images/network.png" alt="network.png" class="large-image">
+					</div>
+			</div>
 			
-			<div class="clear-float"></div> 
+			<div class="step">
+				<h2>Step 5: Add ROM Directory</h2>
+				<p>From ryujinx application: <strong>Options > Settings > Interface</strong></p>
+				<p>In the first box add the directory where your ROMs are located</p>
+				<p class="clear-float">Press OK to save setting</p>
+					<div class="image-container">
+						<img src="Images/gamedirectory.png" alt="gamedirectory.png" class="large-image">
+					</div>
+			</div>
+			<div class="step">
+				<h2>Now you can start the emulator</h2>
+				<p><strong>NB. ryuLDN emulate a local LAN, you cannot use internet feature like Ranked Battle or Mystery Gift</strong></p>
+				<p class="clear-float"><strong>Use private battle > LOCAL for pvp</strong></p>
+					<div class="image-container">
+						<img src="Images/privatebattle.png" alt="privatebattle.png">
+					</div>
+					<br>
+				<p class="clear-float"><strong>Use Link Trade to trade Pokemons</strong></p>
+					<br>
+					<div class="image-container">
+						<img src="Images/linktrade.png" alt="linktrade.png">
+					</div>
+			</div>
+		</div>
+
+
+		<div id="Eden" class="tab-content hidden">
+			<h1>HOW TO INSTALL EDEN WITH LAN FEATURES</h1>
+			<p>Follow this steps to install and play.</p>
+
+			<div class="step">
+				<h2>Step 1: Download the emulator</h2>
+				<p><a href="https://github.com/Eden-CI/PR/releases/download/2835-8ae0ec35bd/Eden-Windows-2835-8ae0ec35bd-amd64-clang-standard.zip">Eden - Clang</a></p>
+			</div>
+
+			<div class="step">
+				<h2>Step 2: Unzip</h2>
+				<p>Open the archive and place it anywhere on your computer</p>
+			</div>
+
+			<div class="step">
+				<h2>Step 3: Open the application and install Firmware and ProdsKey</h2>
+				<p><a href="https://files.prodkeys.net/ProdKeys.NET-v20.5.0.zip">ProdsKey 20.5.0</a></p>
+				<p>From Eden application: <strong>Tool > Install Decryption Keys</strong></p>
+				<p><a href="https://github.com/THZoria/NX_Firmware/releases/download/20.5.0/Firmware.20.5.0.zip">Firmware 20.5.0</a></p>
+				<p class="clear-float">From Eden application: <strong>Tool > Install Firmware > Install Zip or Folder</strong></p>
+					<div class="image-container">
+						<img src="Images/edenprods.png" alt="edenprods.png">
+					</div>
+			</div>
+			 
+			<div class="step">
+				<h2>Step 4: check default Network Interface</h2>
+				<p>From eden application: <strong>Emulation > Configure > System > Network</strong></p>
+				<p>Be sure its selected the network interface you are using (Ethernet or Wifi or extra adapter)</p>
+				<p>Keep disabled Enable Airplane Mode</p>
+				<p class="clear-float">Press OK to save setting</p>
+					<div class="image-container">
+						<img src="Images/edennetwork.png" alt="edennetwork.png">
+					</div>
+			</div>
+			
+			<div class="step">
+				<h2>Step 5: Add ROM Directory</h2>
+				<p>From Eden application: Double click on Add New Game Directory</p>
+				<p>Select the directory where your ROMs are located</p>
+				<p class="clear-float">Press OK to save setting</p>
+					<div class="image-container">
+						<img src="Images/addnewdir.png" alt="addnewdir.png" class="large-image">
+					</div>
+			</div>
+			<div class="step">
+				<h2>Now you can start the emulator</h2>
+				<p><strong>NB. Eden emulate a local LAN, you cannot use internet feature like Ranked Battle or Mystery Gift</strong></p>
+				<p class="clear-float"><strong>Use private battle > LOCAL for pvp</strong></p>
+					<div class="image-container">
+						<img src="Images/privatebattle.png" alt="privatebattle.png">
+					</div>
+					<br>
+				<p class="clear-float"><strong>Use Link Trade to trade Pokemons</strong></p>
+					<br>
+					<div class="image-container">
+						<img src="Images/linktrade.png" alt="linktrade.png">
+					</div>
+			</div>
+		</div>
+
+		<div id="TransferSave" class="tab-content hidden">
+			<h1>TRANSFER SAVE DATA BETWEEN EMULATORS</h1>
+			<p>This section explains how to transfer save files between different emulators (Ryujinx, Eden, etc.) using the game's local save file.</p>
+
+			<div class="step">
+				<h2>1. Estrazione del Salvataggio (Emulatore di Partenza)</h2>
+				<ol>
+					<li>In the game list, <strong>Right Click</strong> on the game title.</li>
+					<li>Select <strong>"Open Save Data Location"</strong> (or similar).</li>
+					<li>The save location folder will open. You should see a file named <code>main</code>.</li>
+					<li><strong>Copy</strong> this <code>main</code> file.</li>
+				</ol>
+				
+				<div class="clear-float"></div> 
+			</div>
+			
+			<div class="step">
+				<h2>2. Trasferimento del Salvataggio (Emulatore di Destinazione)</h2>
+				<p>Follow these steps to import the <code>main</code> file into the destination emulator:</p>
+				<ul>
+					<li><strong>First Run Requirement (Important):</strong> If you have <strong>never</strong> run the game on this emulator, the save folder might be empty. Start a <strong>new game</strong>, save as soon as possible, and close the emulator. This creates the necessary file structure.</li>
+					<li>In the game list, <strong>Right Click</strong> on the game title.</li>
+					<li>Select <strong>"Open Save Data Location"</strong>.</li>
+					<li><strong>Paste</strong> the <code>main</code> file you copied. You will be prompted to overwrite the existing file (from the <em>fresh</em> game), <strong>Accept</strong> the overwrite.</li>
+				</ul>
+				<div class="clear-float"></div> 
+			</div>
+			
+			<div class="step">
+				<h2>Additional Notes</h2>
+				<p>The emulator should now load the transferred save data when you start the game.</p>
+				<div class="clear-float"></div> 
+			</div>
+
+		</div>
+		
+	<div id="Troubleshooting" class="tab-content hidden">
+		<h1>TROUBLESHOOTING & ERROR FIXES</h1>
+		
+		<p>To troubleshoot effectively, you’ll want to keep an eye on Ryujinx’s logs. If you’re not sure where to find them, go to <strong>File > Open Logs Folder</strong> in the Ryujinx menu.</p>
+
+		<div class="step">
+			<div class="image-container">
+				<img src="Images/openlogs.png" alt="openlogs.png">
+			</div>
+			<div class="clear-float"></div>
 		</div>
 		
 		<div class="step">
-			<h2>2. Trasferimento del Salvataggio (Emulatore di Destinazione)</h2>
-			<p>Follow these steps to import the <code>main</code> file into the destination emulator:</p>
+			<h2>Invalid Memory Access Errors</h2>
 			<ul>
-				<li><strong>First Run Requirement (Important):</strong> If you have <strong>never</strong> run the game on this emulator, the save folder might be empty. Start a <strong>new game</strong>, save as soon as possible, and close the emulator. This creates the necessary file structure.</li>
-				<li>In the game list, <strong>Right Click</strong> on the game title.</li>
-				<li>Select <strong>"Open Save Data Location"</strong>.</li>
-				<li><strong>Paste</strong> the <code>main</code> file you copied. You will be prompted to overwrite the existing file (from the <em>fresh</em> game), <strong>Accept</strong> the overwrite.</li>
+				<li>Memory errors often arise from mod or cheat conflicts. Confirm no mods/cheats are conflicting. Disabled cheats still load into memory, so review all active modifications.</li>
 			</ul>
-			<div class="clear-float"></div> 
 		</div>
-		
 		<div class="step">
-			<h2>Additional Notes</h2>
-			<p>The emulator should now load the transferred save data when you start the game.</p>
-			<div class="clear-float"></div> 
+			<h2>Inconsistent Frame Timing</h2>
+			<ul>
+				<li>Disable VSync in Ryujinx, and externally cap the framerate using GPU driver settings or RivaTuner.</li>
+			</ul>
 		</div>
+		<div class="step">
+			<h2>Fatal System Error: System.AccessViolationException</h2>
+			<ul>
+				<li>Causes could include Ryujinx being in a protected folder or blocked by antivirus software. Remove GShade if it’s causing compatibility issues, and uninstall the “OpenCL, OpenGL, and Vulkan Compatibility Pack” if on a Rog Ally.</li>
+			</ul>
+		</div>
+		<div class="step">
+			<h2>Game Crash with VRAM Exhaustion Error</h2>
+			<p>Error message: <code>|E| GUI.RenderThread Application : Unhandled exception caught: Ryujinx.Graphics.Vulkan.VulkanException: Unexpected API error "ErrorOutOfDeviceMemory"</code></p>
+			<ul>
+				<li>Lower resolution scaling if set high (e.g., 4x), as it’s often unnecessary and VRAM-intensive.</li>
+				<li>Enable texture recompression in graphics settings if VRAM usage is high.</li>
+			</ul>	
+		</div>
+		<div class="step">
+			<h2>Black Screen with Audio on Nvidia GPUs</h2>
+			<ul>
+				<li>Go to Nvidia Control Panel and reset global settings to their defaults.</li>
+			</ul>
+		</div>
+		<div class="step">
+			<h2>NSP File Not Displaying on Main Menu or Hanging Emulator</h2>
+			<p>Warning: <code>|W| Loader GetNpdm: NPDM file not found, using default values!</code></p>
+			<ul>
+				<li>This error indicates you’re attempting to load an update file rather than the game file. Refer to the Ryujinx setup guide for proper game updates.</li>
+			</ul>
+		</div>
+		<div class="step">
+			<h2>Missing or Invalid Keys</h2>	
+			<p>Error Message: <code>Missing NCA title key</code> or <code>Unable to decrypt title key</code></p>
+			<ul>
+				<li>This error means the emulator is missing crucial encryption keys for the game. Redump your keys or update them to match your firmware version. These keys allow Ryujinx to read and load game files correctly, so having the latest versions is essential.</li>
+			</ul>
+		</div>
+		<div class="step">
+			<h2>Error: Could Not Find Vulkan Library (vulkan-1.dll)</h2>	
+			<ul>
+				<li>This happens if Ryujinx can’t locate a compatible GPU driver for Vulkan. First, make sure your drivers are fully updated. If the issue remains, your graphics hardware might not support Vulkan, and you may need to switch to the OpenGL graphics API if Vulkan isn’t required for your specific setup.</li>
+			</ul>
+		</div>
+		<div class="step">
+			<h2>Ryujinx Crashes Without Any Errors or Closes Immediately</h2>	
+			<ul>
+				<li>If Ryujinx closes right after you open it, it’s often because of antivirus software or running it in a protected folder. Make sure the emulator is in a regular, accessible directory and whitelist Ryujinx in any third-party antivirus program.</li>
+			</ul>
+		</div>
+		<div class="step">
+			<h2>GLib.GException: Unrecognized image file format</h2>	
+			<p>Error Message: <code>GLib.GException: Unrecognized image file format</code></p>
+			<ul>
+				<li>This error is also related to Ryujinx being in a protected folder. Move Ryujinx to a regular directory (such as <code>C:\Users\YourName\Documents\Ryujinx</code>) and avoid storing it in locations like <code>C:\Program Files</code> or the Desktop.</li>
+			</ul>
+		</div>
+		<div class="step">
+			<h2>Corrupted Save File Warning</h2>	
+			<ul>
+				<li>Corruption may occur if attempting to load saves from newer game versions on older updates. Update the game if needed, and frequently back up save files to avoid loss from unexpected shutdowns.</li>
+				<li>You can try to recover and fix your corrupted save on <a href="https://pl.azalea.sh/" target="_blank">this website</a></li>
+			</ul>
+		</div>
+	</div>
+		<script>
+			function openTutorial(evt, tutorialName) {
+				var i, tabcontent, tabbuttons;
 
-	</div>
-	
-<div id="Troubleshooting" class="tab-content hidden">
-    <h1>TROUBLESHOOTING & ERROR FIXES</h1>
-    
-    <p>To troubleshoot effectively, you’ll want to keep an eye on Ryujinx’s logs. If you’re not sure where to find them, go to <strong>File > Open Logs Folder</strong> in the Ryujinx menu.</p>
+				// 1. Nasconde tutti i contenuti dei tab
+				tabcontent = document.getElementsByClassName("tab-content");
+				for (i = 0; i < tabcontent.length; i++) {
+					tabcontent[i].style.display = "none";
+				}
 
-    <div class="step">
-        <div class="image-container">
-            <img src="Images/openlogs.png" alt="openlogs.png">
-        </div>
-        <div class="clear-float"></div>
-    </div>
-	
-	<div class="step">
-		<h2>Invalid Memory Access Errors</h2>
-		<ul>
-			<li>Memory errors often arise from mod or cheat conflicts. Confirm no mods/cheats are conflicting. Disabled cheats still load into memory, so review all active modifications.</li>
-		</ul>
-	</div>
-	<div class="step">
-		<h2>Inconsistent Frame Timing</h2>
-		<ul>
-			<li>Disable VSync in Ryujinx, and externally cap the framerate using GPU driver settings or RivaTuner.</li>
-		</ul>
-	</div>
-    <div class="step">
-		<h2>Fatal System Error: System.AccessViolationException</h2>
-		<ul>
-			<li>Causes could include Ryujinx being in a protected folder or blocked by antivirus software. Remove GShade if it’s causing compatibility issues, and uninstall the “OpenCL, OpenGL, and Vulkan Compatibility Pack” if on a Rog Ally.</li>
-		</ul>
-	</div>
-    <div class="step">
-		<h2>Game Crash with VRAM Exhaustion Error</h2>
-		<p>Error message: <code>|E| GUI.RenderThread Application : Unhandled exception caught: Ryujinx.Graphics.Vulkan.VulkanException: Unexpected API error "ErrorOutOfDeviceMemory"</code></p>
-		<ul>
-			<li>Lower resolution scaling if set high (e.g., 4x), as it’s often unnecessary and VRAM-intensive.</li>
-			<li>Enable texture recompression in graphics settings if VRAM usage is high.</li>
-		</ul>	
-	</div>
-    <div class="step">
-		<h2>Black Screen with Audio on Nvidia GPUs</h2>
-		<ul>
-			<li>Go to Nvidia Control Panel and reset global settings to their defaults.</li>
-		</ul>
-	</div>
-    <div class="step">
-		<h2>NSP File Not Displaying on Main Menu or Hanging Emulator</h2>
-		<p>Warning: <code>|W| Loader GetNpdm: NPDM file not found, using default values!</code></p>
-		<ul>
-			<li>This error indicates you’re attempting to load an update file rather than the game file. Refer to the Ryujinx setup guide for proper game updates.</li>
-		</ul>
-	</div>
-    <div class="step">
-		<h2>Missing or Invalid Keys</h2>	
-		<p>Error Message: <code>Missing NCA title key</code> or <code>Unable to decrypt title key</code></p>
-		<ul>
-			<li>This error means the emulator is missing crucial encryption keys for the game. Redump your keys or update them to match your firmware version. These keys allow Ryujinx to read and load game files correctly, so having the latest versions is essential.</li>
-		</ul>
-	</div>
-    <div class="step">
-		<h2>Error: Could Not Find Vulkan Library (vulkan-1.dll)</h2>	
-		<ul>
-			<li>This happens if Ryujinx can’t locate a compatible GPU driver for Vulkan. First, make sure your drivers are fully updated. If the issue remains, your graphics hardware might not support Vulkan, and you may need to switch to the OpenGL graphics API if Vulkan isn’t required for your specific setup.</li>
-		</ul>
-	</div>
-    <div class="step">
-		<h2>Ryujinx Crashes Without Any Errors or Closes Immediately</h2>	
-		<ul>
-			<li>If Ryujinx closes right after you open it, it’s often because of antivirus software or running it in a protected folder. Make sure the emulator is in a regular, accessible directory and whitelist Ryujinx in any third-party antivirus program.</li>
-		</ul>
-	</div>
-    <div class="step">
-		<h2>GLib.GException: Unrecognized image file format</h2>	
-		<p>Error Message: <code>GLib.GException: Unrecognized image file format</code></p>
-		<ul>
-			<li>This error is also related to Ryujinx being in a protected folder. Move Ryujinx to a regular directory (such as <code>C:\Users\YourName\Documents\Ryujinx</code>) and avoid storing it in locations like <code>C:\Program Files</code> or the Desktop.</li>
-		</ul>
-	</div>
-	<div class="step">
-		<h2>Corrupted Save File Warning</h2>	
-		<ul>
-			<li>Corruption may occur if attempting to load saves from newer game versions on older updates. Update the game if needed, and frequently back up save files to avoid loss from unexpected shutdowns.</li>
-			<li>You can try to recover and fix your corrupted save on <a href="https://pl.azalea.sh/" target="_blank">this website</a></li>
-		</ul>
-	</div>
-</div>
-	<script>
-        function openTutorial(evt, tutorialName) {
-            var i, tabcontent, tabbuttons;
+				// 2. Rimuove la classe 'active' da tutti i pulsanti
+				tabbuttons = document.getElementsByClassName("tab-button");
+				for (i = 0; i < tabbuttons.length; i++) {
+					tabbuttons[i].className = tabbuttons[i].className.replace(" active", "");
+				}
 
-            // 1. Nasconde tutti i contenuti dei tab
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-
-            // 2. Rimuove la classe 'active' da tutti i pulsanti
-            tabbuttons = document.getElementsByClassName("tab-button");
-            for (i = 0; i < tabbuttons.length; i++) {
-                tabbuttons[i].className = tabbuttons[i].className.replace(" active", "");
-            }
-
-            // 3. Mostra il contenuto del tab corrente e aggiunge la classe 'active' al pulsante
-            document.getElementById(tutorialName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-        
-        // Assicura che Ryujinx sia visibile al caricamento (imposta display: block)
-        document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('Ryujinx').style.display = 'block';
-        });
-    </script>
-	<footer>
-        <p>&copy; reav 2024 Pokemon Legends ZA Emulator Guide.</p>
-    </footer>
+				// 3. Mostra il contenuto del tab corrente e aggiunge la classe 'active' al pulsante
+				document.getElementById(tutorialName).style.display = "block";
+				evt.currentTarget.className += " active";
+			}
+			
+			// Assicura che Ryujinx sia visibile al caricamento (imposta display: block)
+			document.addEventListener('DOMContentLoaded', (event) => {
+				document.getElementById('Ryujinx').style.display = 'block';
+			});
+		</script>
+		<footer>
+			<p>&copy; reav 2024 Pokemon Legends ZA Emulator Guide.</p>
+		</footer>
+	</div>
 </body>
 </html>
