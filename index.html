@@ -9,16 +9,22 @@
         h1 { color: #333; }
         .step { margin-bottom: 20px; padding: 15px; border-left: 5px solid #0070f3; background-color: #f6f8fa; }
         code { background-color: #eee; padding: 2px 4px; border-radius: 4px; }
-        .image-container { 
-            text-align: center; 
-            margin: 15px 0; 
-        }
-        .step img { 
-            max-width: 100%; 
-            height: auto; 
-            border: 1px solid #ccc; 
-            border-radius: 4px; 
-        }
+	.step img { 
+        max-width: 40%; /* Riduci la larghezza per permettere al testo di fluire */
+        height: auto; 
+        border: 1px solid #ccc; 
+        border-radius: 4px; 
+        
+        /* ALLINEAMENTO A SINISTRA */
+        float: left; 
+        margin-right: 15px; /* Spazio a destra dell'immagine */
+        margin-bottom: 10px;
+    }
+    .image-container { 
+        text-align: left; /* Togliamo il centro, usiamo float */
+        margin: 0;
+        float: left;
+    }
     </style>
 </head>
 <body>
@@ -43,7 +49,6 @@
 		<p>From ryujinx application: Action > Install Firmware > Install Zip or Folder</p>
 			<div class="image-container">
 				<img src="Images/prodsandfirm.png" alt="prodsandfirm.png">
-				<p style="font-size: small; color: #666;">prodsandfirm</p>
 			</div>
 	</div>
     
@@ -54,6 +59,9 @@
 		<p>Enable Guest Internet Access/LAN mode </p>
 		<p>Network Interface: (Select your network Ethernet/Wifi etc </p>
 		<p>Press OK to save setting</p>
+			<div class="image-container">
+				<img src="Images/network.png" alt="network.png">
+			</div>
     </div>
 	
 	<div class="step">
@@ -61,6 +69,9 @@
 		<p>From ryujinx application: Options > Settings > Interface</p>
 		<p>In the first box add the directory where your ROMs are located</p>
 		<p>Press OK to save setting</p>
+			<div class="image-container">
+				<img src="Images/gamedirectory.png" alt="gamedirectory.png">
+			</div>
 	</div>
 </body>
 </html>
