@@ -257,56 +257,65 @@
 			<li>Memory errors often arise from mod or cheat conflicts. Confirm no mods/cheats are conflicting. Disabled cheats still load into memory, so review all active modifications.</li>
 		</ul>
 	</div>
-    <h2>Inconsistent Frame Timing</h2>
-    <ul>
-        <li>Disable VSync in Ryujinx, and externally cap the framerate using GPU driver settings or RivaTuner.</li>
-    </ul>
-    
-    <h2>Fatal System Error: System.AccessViolationException</h2>
-    <ul>
-        <li>Causes could include Ryujinx being in a protected folder or blocked by antivirus software. Remove GShade if it’s causing compatibility issues, and uninstall the “OpenCL, OpenGL, and Vulkan Compatibility Pack” if on a Rog Ally.</li>
-    </ul>
-    
-    <h2>Game Crash with VRAM Exhaustion Error</h2>
-    <p>Error message: <code>|E| GUI.RenderThread Application : Unhandled exception caught: Ryujinx.Graphics.Vulkan.VulkanException: Unexpected API error "ErrorOutOfDeviceMemory"</code></p>
-    <ul>
-        <li>Lower resolution scaling if set high (e.g., 4x), as it’s often unnecessary and VRAM-intensive.</li>
-        <li>Enable texture recompression in graphics settings if VRAM usage is high.</li>
-    </ul>	
-    
-    <h2>Black Screen with Audio on Nvidia GPUs</h2>
-    <ul>
-        <li>Go to Nvidia Control Panel and reset global settings to their defaults.</li>
-    </ul>
-    
-    <h2>NSP File Not Displaying on Main Menu or Hanging Emulator</h2>
-    <p>Warning: <code>|W| Loader GetNpdm: NPDM file not found, using default values!</code></p>
-    <ul>
-        <li>This error indicates you’re attempting to load an update file rather than the game file. Refer to the Ryujinx setup guide for proper game updates.</li>
-    </ul>
-    
-    <h2>Missing or Invalid Keys</h2>	
-    <p>Error Message: <code>Missing NCA title key</code> or <code>Unable to decrypt title key</code></p>
-    <ul>
-        <li>This error means the emulator is missing crucial encryption keys for the game. Redump your keys or update them to match your firmware version. These keys allow Ryujinx to read and load game files correctly, so having the latest versions is essential.</li>
-    </ul>
-    
-    <h2>Error: Could Not Find Vulkan Library (vulkan-1.dll)</h2>	
-    <ul>
-        <li>This happens if Ryujinx can’t locate a compatible GPU driver for Vulkan. First, make sure your drivers are fully updated. If the issue remains, your graphics hardware might not support Vulkan, and you may need to switch to the OpenGL graphics API if Vulkan isn’t required for your specific setup.</li>
-    </ul>
-    
-    <h2>Ryujinx Crashes Without Any Errors or Closes Immediately</h2>	
-    <ul>
-        <li>If Ryujinx closes right after you open it, it’s often because of antivirus software or running it in a protected folder. Make sure the emulator is in a regular, accessible directory and whitelist Ryujinx in any third-party antivirus program.</li>
-    </ul>
-    
-    <h2>GLib.GException: Unrecognized image file format</h2>	
-    <p>Error Message: <code>GLib.GException: Unrecognized image file format</code></p>
-    <ul>
-        <li>This error is also related to Ryujinx being in a protected folder. Move Ryujinx to a regular directory (such as <code>C:\Users\YourName\Documents\Ryujinx</code>) and avoid storing it in locations like <code>C:\Program Files</code> or the Desktop.</li>
-    </ul>
-	
+	<div class="step">
+		<h2>Inconsistent Frame Timing</h2>
+		<ul>
+			<li>Disable VSync in Ryujinx, and externally cap the framerate using GPU driver settings or RivaTuner.</li>
+		</ul>
+	</div>
+    <div class="step">
+		<h2>Fatal System Error: System.AccessViolationException</h2>
+		<ul>
+			<li>Causes could include Ryujinx being in a protected folder or blocked by antivirus software. Remove GShade if it’s causing compatibility issues, and uninstall the “OpenCL, OpenGL, and Vulkan Compatibility Pack” if on a Rog Ally.</li>
+		</ul>
+	</div>
+    <div class="step">
+		<h2>Game Crash with VRAM Exhaustion Error</h2>
+		<p>Error message: <code>|E| GUI.RenderThread Application : Unhandled exception caught: Ryujinx.Graphics.Vulkan.VulkanException: Unexpected API error "ErrorOutOfDeviceMemory"</code></p>
+		<ul>
+			<li>Lower resolution scaling if set high (e.g., 4x), as it’s often unnecessary and VRAM-intensive.</li>
+			<li>Enable texture recompression in graphics settings if VRAM usage is high.</li>
+		</ul>	
+	</div>
+    <div class="step">
+		<h2>Black Screen with Audio on Nvidia GPUs</h2>
+		<ul>
+			<li>Go to Nvidia Control Panel and reset global settings to their defaults.</li>
+		</ul>
+	</div>
+    <div class="step">
+		<h2>NSP File Not Displaying on Main Menu or Hanging Emulator</h2>
+		<p>Warning: <code>|W| Loader GetNpdm: NPDM file not found, using default values!</code></p>
+		<ul>
+			<li>This error indicates you’re attempting to load an update file rather than the game file. Refer to the Ryujinx setup guide for proper game updates.</li>
+		</ul>
+	</div>
+    <div class="step">
+		<h2>Missing or Invalid Keys</h2>	
+		<p>Error Message: <code>Missing NCA title key</code> or <code>Unable to decrypt title key</code></p>
+		<ul>
+			<li>This error means the emulator is missing crucial encryption keys for the game. Redump your keys or update them to match your firmware version. These keys allow Ryujinx to read and load game files correctly, so having the latest versions is essential.</li>
+		</ul>
+	</div>
+    <div class="step">
+		<h2>Error: Could Not Find Vulkan Library (vulkan-1.dll)</h2>	
+		<ul>
+			<li>This happens if Ryujinx can’t locate a compatible GPU driver for Vulkan. First, make sure your drivers are fully updated. If the issue remains, your graphics hardware might not support Vulkan, and you may need to switch to the OpenGL graphics API if Vulkan isn’t required for your specific setup.</li>
+		</ul>
+	</div>
+    <div class="step">
+		<h2>Ryujinx Crashes Without Any Errors or Closes Immediately</h2>	
+		<ul>
+			<li>If Ryujinx closes right after you open it, it’s often because of antivirus software or running it in a protected folder. Make sure the emulator is in a regular, accessible directory and whitelist Ryujinx in any third-party antivirus program.</li>
+		</ul>
+	</div>
+    <div class="step">
+		<h2>GLib.GException: Unrecognized image file format</h2>	
+		<p>Error Message: <code>GLib.GException: Unrecognized image file format</code></p>
+		<ul>
+			<li>This error is also related to Ryujinx being in a protected folder. Move Ryujinx to a regular directory (such as <code>C:\Users\YourName\Documents\Ryujinx</code>) and avoid storing it in locations like <code>C:\Program Files</code> or the Desktop.</li>
+		</ul>
+	</div>
 </div>
 	<script>
         function openTutorial(evt, tutorialName) {
