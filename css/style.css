@@ -78,6 +78,26 @@ body {
     .hidden {
         display: none;
     }
+	.header-logo-container {
+		width: 100%;
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.logo-image {
+		display: inline-block;
+		width: 150px;
+		height: auto; 
+	}
+	.header-logo-container {
+		display: flex;
+		justify-content: center;
+		align-items: center; 
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	*/
 
 	@media (max-width: 600px) {
 		body {
