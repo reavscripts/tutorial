@@ -8,7 +8,7 @@
 		padding: 0; /* Rimuove i padding predefiniti del browser */
 
 		/* Regole di sfondo */
-		background-image: url('Images/background.jpg'); 
+		background-image: url('../Images/background.jpg'); 
 		background-repeat: no-repeat; 
 		background-size: cover; 
 		background-attachment: fixed; 
