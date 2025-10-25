@@ -191,22 +191,41 @@
         </div>
     </div>
 
-    <div id="TransferSave" class="tab-content hidden">
-        <h1>TRANSFER SAVE DATA BETWEEN EMULATORS</h1>
-        <p>This section explains how to transfer save files between different emulators.</p>
+	<div id="TransferSave" class="tab-content hidden">
+		<h1>TRANSFER SAVE DATA BETWEEN EMULATORS</h1>
+		<p>This section explains how to transfer save files between different emulators (Ryujinx, Eden, etc.) using the game's local save file.</p>
 
-        <div class="step">
-            <h2>Right Click on the game title</h2>
-            <p>Open Save Data Location.</p>
-			<p>The Save location will open and u will see a file called <code>main</code>.</p>
-			<p>Copy it</p>
-			<p>Go to the other emulator u want to transfer the save file with and do the same.</p>
-			<p>Right click and Open Save Data Location.</p>
-			<p>Paste the <code>main</code> file</p>
-			<p>NB: if you never run the game on this emulator the save folder may be empty</p>
-			<p>Start  a fresh game and save as soon as poosible and stop the emulation</p>
-			<p>Now you will see main file and you can overwrite it</p>
-        </div>
+		<div class="step">
+			<h2>1. Estrazione del Salvataggio (Emulatore di Partenza)</h2>
+			<ol>
+				<li>**Nella lista dei giochi**, fai **tasto destro** sul titolo del gioco.</li>
+				<li>Seleziona **"Open Save Data Location"** (o simile).</li>
+				<li>Si aprirà la cartella dei salvataggi. Troverai un file chiamato **<code>main</code>**.</li>
+				<li>**Copia** questo file <code>main</code>.</li>
+			</ol>
+			
+			<div class="clear-float"></div> 
+		</div>
+		
+		<div class="step">
+			<h2>2. Trasferimento del Salvataggio (Emulatore di Destinazione)</h2>
+			<p>Segui questi passi per importare il file <code>main</code> nell'emulatore di destinazione:</p>
+			<ul>
+				<li>**Prima esecuzione (Importante):** Se non hai **mai** avviato il gioco su questo emulatore, la cartella dei salvataggi sarà vuota. Avvia una **nuova partita**, salva appena possibile, ed esci dall'emulatore. Questo crea la struttura necessaria.</li>
+				<li>**Nella lista dei giochi**, fai **tasto destro** sul titolo del gioco.</li>
+				<li>Seleziona **"Open Save Data Location"**.</li>
+				<li>**Incolla** il file **<code>main</code>** che hai copiato. Ti verrà chiesto di sovrascrivere il file esistente (quello della partita *fresh*), accetta.</li>
+			</ul>
+			<div class="clear-float"></div> 
+		</div>
+		
+		<div class="step">
+			<h2>Note Aggiuntive</h2>
+			<p>L'emulatore ora caricherà i dati di salvataggio trasferiti.</p>
+			<div class="clear-float"></div> 
+		</div>
+
+	</div>
     <script>
         function openTutorial(evt, tutorialName) {
             var i, tabcontent, tabbuttons;
