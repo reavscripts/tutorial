@@ -81,7 +81,7 @@ body {
 
 	@media (max-width: 600px) {
 		body {
-			max-width: none; 
+			max-width: 100%; 
 			width: 100%;
 			margin: 10px 0;
 			padding: 0 10px;
