@@ -41,11 +41,14 @@ body {
         margin-top: 10px; 
     }
         
-    .tab-container {
-        display: flex;
-        justify-content: center;
-        margin-bottom: -1px; 
-    }
+	.tab-container {
+		display: flex;
+		justify-content: center; 
+		margin-bottom: -1px; 
+		max-width: fit-content; 
+		margin-left: auto;    
+		margin-right: auto; 
+	}
 	.tab-button {
 		background-color: #ccc;
 		border: none;
