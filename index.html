@@ -55,7 +55,7 @@
         .tab-content {
             border: 1px solid #ccc;
             padding: 20px;
-            margin-top: -1px; /* Per farli toccare i pulsanti */
+            margin-top: -1px; 
         }
         /* Regola per nascondere i contenuti non selezionati */
         .hidden {
@@ -68,6 +68,7 @@
     <div style="margin-bottom: -1px;">
         <button class="tab-button active" onclick="openTutorial(event, 'Ryujinx')">Ryujinx Canary</button>
         <button class="tab-button" onclick="openTutorial(event, 'Eden')">Eden with LAN</button>
+        <button class="tab-button" onclick="openTutorial(event, 'TransferSave')">TRANSFER SAVE</button>
     </div>
 
     <div id="Ryujinx" class="tab-content">
@@ -190,6 +191,26 @@
         </div>
     </div>
 
+    <div id="TransferSave" class="tab-content hidden">
+        <h1>TRANSFER SAVE DATA GUIDE</h1>
+        <p>This section explains how to transfer save files between different versions of the emulator.</p>
+
+        <div class="step">
+            <h2>Step 1: Locate your save files</h2>
+            <p>Save files are typically located in the emulator's user folder. Look for a folder named <code>save</code> or <code>saves</code>.</p>
+        </div>
+
+        <div class="step">
+            <h2>Step 2: Backup your files</h2>
+            <p>Always make a backup copy of the original save files before attempting any transfer or modification.</p>
+            <div class="image-container">
+                <img src="Images/backup-example.png" alt="Example of save file folder" class="large-image">
+            </div>
+            <div class="clear-float"></div>
+        </div>
+        
+        </div>
+
     <script>
         function openTutorial(evt, tutorialName) {
             var i, tabcontent, tabbuttons;
@@ -211,7 +232,7 @@
             evt.currentTarget.className += " active";
         }
         
-        // Assicura che Ryujinx sia visibile al caricamento (anche se il CSS lo fa già)
+        // Assicura che Ryujinx sia visibile al caricamento (imposta display: block)
         document.addEventListener('DOMContentLoaded', (event) => {
             document.getElementById('Ryujinx').style.display = 'block';
         });
