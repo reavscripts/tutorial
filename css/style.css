@@ -1,35 +1,29 @@
-	body {
+body {
 		font-family: Arial, sans-serif;
 		line-height: 1.6;
-		/* Rimuoviamo le vecchie regole di max-width e margin per il centraggio */
-		width: 100%; 
-		min-height: 100vh; 
-		margin: 0; /* Rimuove i margini predefiniti del browser */
-		padding: 0; /* Rimuove i padding predefiniti del browser */
-
-		/* Regole di sfondo */
-		background-image: url('../Images/background.jpg'); 
-		background-repeat: no-repeat; 
-		background-size: cover; 
-		background-attachment: fixed; 
-		background-position: center center; 
+		width: 100%;
+		min-height: 100vh;
+		margin: 0;
+		padding: 0;
+		background-image: url('../Images/background.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center center;
 	}
 
-	/* Se vuoi che il contenuto rimanga centrato e leggibile */
 	#contenuto-principale {
 		max-width: 800px;
-		margin: 40px auto; /* Ri-applica il centraggio e il margine qui */
+		margin: 40px auto;
 		padding: 20px;
-		/* Aggiungi uno sfondo semi-trasparente per migliorare la leggibilità sopra l'immagine */
-		background-color: rgba(255, 255, 255, 0.85); /* Sfondo bianco semi-trasparente */
-		border-radius: 8px; /* Angoli arrotondati per estetica */
+		background-color: rgba(255, 255, 255, 0.85);
+		border-radius: 8px;
 	}
-    h1 { color: #333; }
+ 	h1 { color: #333; }
 	.step {
 		margin-bottom: 20px;
 		padding: 15px;
-		/* BLU cambiato in VERDE (accento 1) */
-		border-left: 5px solid #4CAF50; 
+		border-left: 5px solid #4CAF50;
 		background-color: #f6f8fa;
 		overflow: auto;
 	}
@@ -61,13 +55,17 @@
 		margin-top: 10px;
 	}
 
-	.tab-container {
+	.tab-wrapper {
 		display: flex;
 		justify-content: center;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.tab-container {
+		display: flex;
 		margin-bottom: -1px;
-		max-width: fit-content;
-		margin-left: auto;
-		margin-right: auto;
+		width: 100%;
 	}
 	.tab-button {
 		background-color: #ccc;
@@ -78,23 +76,24 @@
 		font-size: 16px;
 		border-radius: 5px 5px 0 0;
 		transition: background-color 0.3s;
-		flex-grow: 1;
 		min-width: 0;
 		text-align: center;
 		white-space: nowrap;
+		display: block;
 	}
 	.tab-button:hover {
 		background-color: #ddd;
 	}
 	.tab-button.active {
-		/* BLU cambiato in VERDE (accento 2) */
-		background-color: #4CAF50; 
+		background-color: #4CAF50;
 		color: white;
 	}
 	.tab-content {
 		border: 1px solid #ccc;
 		padding: 20px;
 		margin-top: -1px;
+		width: 100%;
+		box-sizing: border-box;
 	}
 	.hidden {
 		display: none;
@@ -119,47 +118,35 @@
 	}
 	
 	.game-action-button {
-	  /* Inherit font and basic structure */
 	  font-family: Arial, sans-serif;
-	  font-size: 20px; /* Slightly larger for a main action button */
+	  font-size: 20px;
 	  font-weight: bold;
 	  text-transform: uppercase;
 	  cursor: pointer;
-	  
-	  /* Color Scheme based on your accent green #4CAF50 */
-	  background-color: #4CAF50; /* Primary green */
-	  color: white; /* White text for contrast */
-	  
-	  /* 3D "Press-Down" look */
+	  background-color: #4CAF50;
+	  color: white;
 	  border: none;
 	  border-radius: 8px;
 	  padding: 12px 25px;
-	  
-	  /* Create the bottom "lip" border with a darker green */
-	  /* Darker shade of #4CAF50 is approximately #388E3C */
 	  border-bottom: 6px solid #388E3C;
-	  
 	  transition: all 0.1s ease;
-	  outline: none; /* Remove focus outline */
+	  outline: none;
 	}
 
 	.game-action-button:hover {
-	  /* Lighter shade on hover */
 	  background-color: #66BB6A;
 	}
 
 	.game-action-button:active {
-	  /* Press-Down Effect */
-	  transform: translateY(3px); /* Moves the button down halfway */
-	  border-bottom-width: 3px; /* Reduces the bottom lip height by half */
-	  padding-bottom: 15px; /* Adjusts padding to keep visual size consistent */
+	  transform: translateY(3px);
+	  border-bottom-width: 3px;
+	  padding-bottom: 15px;
 	}
 
-	/* A secondary button color (e.g., for a "Cancel" or "Info" button) */
 	.game-action-button.secondary {
-	  background-color: #FF9800; /* Primary Orange (a common secondary color) */
+	  background-color: #FF9800;
 	  color: #333;
-	  border-bottom: 6px solid #E65100; /* Darker orange lip */
+	  border-bottom: 6px solid #E65100;
 	}
 
 	.game-action-button.secondary:hover {
@@ -172,15 +159,12 @@
 	  padding-bottom: 15px;
 	}
 
-		/* ===============================
-		   Game Link List Styling
-		   =============================== */
 	.game-link-list {
 		margin-top: 30px;
 		padding: 20px;
-		border: 1px solid #ccc; /* Matches the border style of your .tab-content */
+		border: 1px solid #ccc;
 		border-radius: 8px;
-		background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque than #contenuto-principale */
+		background-color: rgba(255, 255, 255, 0.9);
 	}
 
 	.game-link-item {
@@ -189,81 +173,60 @@
 		border: 1px solid #ddd;
 		border-radius: 6px;
 		background-color: #fff;
-		display: flex; 
-		flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
-		align-items: center; 
-		/* Removed justify-content: space-between; as it can cause issues with wrapping */
-		gap: 15px; /* Adds space between items in the flex container */
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 15px;
 	}
 
 	.item-title-container {
 		display: flex;
 		align-items: center;
-		flex-grow: 1; 
-		flex-basis: 0; /* Allows this item to shrink */
-		min-width: 0; /* Important for allowing text within to shrink if needed */
+		flex-grow: 1;
+		flex-basis: 0;
+		min-width: 0;
 	}
 
 	.item-icon {
-		width: 40px; 
+		width: 40px;
 		height: 40px;
 		margin-right: 15px;
-		border-radius: 4px; 
+		border-radius: 4px;
 		object-fit: contain;
-		flex-shrink: 0; /* Prevent icon from shrinking */
+		flex-shrink: 0;
 	}
 
 	.game-link-item h3 {
 		margin: 0;
-		color: #333; 
+		color: #333;
 		font-size: 1.1em;
-		word-break: break-word; /* Allows long words to break if necessary */
-		min-width: 0; /* Allows text to shrink */
+		word-break: break-word;
+		min-width: 0;
 	}
 
-	/* Styling the actual link to look like an action button */
 	.download-link {
 		background-color: #4CAF50;
 		color: white;
-		text-decoration: none; 
+		text-decoration: none;
 		padding: 8px 15px;
 		border-radius: 4px;
 		font-weight: bold;
-		white-space: nowrap; 
+		white-space: nowrap;
 		transition: background-color 0.2s;
-		flex-shrink: 0; /* Prevent the button from shrinking */
-		margin-left: auto; /* Push the link to the far right when space allows */
+		flex-shrink: 0;
+		margin-left: auto;
 	}
 
 	.download-link:hover {
-		background-color: #45a049; 
+		background-color: #45a049;
 	}
 
-	/* Optional: Description text below the title */
 	.item-description {
-		display: none; 
-	}
-
-	/* Responsive adjustment for smaller screens */
-	@media (max-width: 600px) {
-		.game-link-item {
-			flex-direction: column; 
-			align-items: flex-start;
-		}
-		.item-title-container {
-			width: 100%; /* Make title container full width */
-			margin-bottom: 10px;
-			flex-basis: auto; /* Reset flex-basis for mobile */
-		}
-		.download-link {
-			width: 100%; 
-			text-align: center;
-			margin-top: 10px;
-			margin-left: 0; /* Remove auto-margin on mobile */
-		}
+		display: none;
 	}
 
 	@media (max-width: 600px) {
+		
 		body {
 			max-width: none;
 			width: 100%;
@@ -271,10 +234,16 @@
 			padding: 0 10px;
 		}
 
+		.tab-wrapper {
+			padding: 0 10px;
+			box-sizing: border-box;
+		}
+
 		.tab-container {
 			flex-direction: column;
 			margin-bottom: 10px;
 			width: 100%;
+			justify-content: flex-start;
 		}
 			
 		.tab-button {
@@ -299,29 +268,23 @@
 			text-align: center;
 		}
 			
-	}
-	.game-link-item {
-			flex-direction: column; 
+		.game-link-item {
+			flex-direction: column;
 			align-items: flex-start;
 		}
+		
 		.item-title-container {
-			width: 100%; 
+			width: 100%;
 			margin-bottom: 10px;
-			flex-basis: auto; 
+			flex-basis: auto;
 		}
+		
 		.download-link {
-			/* OLD: width: 100%; */
-			
-			/* --- NEW: Limit the width of the button on mobile --- */
-			width: auto; /* Allow the button to shrink to its content size */
-			max-width: 250px; /* Set a maximum width */
-			
+			width: 100%;
+			max-width: none;
 			text-align: center;
 			margin-top: 10px;
-			margin-left: 0; 
-			
-			/* NEW: Center the button horizontally now that it's not 100% wide */
-			margin-right: auto;
-			margin-left: auto;
+			margin-left: 0;
+			margin-right: 0;
 		}
 	}
