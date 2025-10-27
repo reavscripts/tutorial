@@ -300,16 +300,28 @@
 		}
 			
 	}
-		.game-link-item {
-			flex-direction: column; /* Stack items vertically */
+	.game-link-item {
+			flex-direction: column; 
 			align-items: flex-start;
 		}
 		.item-title-container {
+			width: 100%; 
 			margin-bottom: 10px;
+			flex-basis: auto; 
 		}
 		.download-link {
-			width: 100%; /* Make link full width on mobile */
+			/* OLD: width: 100%; */
+			
+			/* --- NEW: Limit the width of the button on mobile --- */
+			width: auto; /* Allow the button to shrink to its content size */
+			max-width: 250px; /* Set a maximum width */
+			
 			text-align: center;
 			margin-top: 10px;
+			margin-left: 0; 
+			
+			/* NEW: Center the button horizontally now that it's not 100% wide */
+			margin-right: auto;
+			margin-left: auto;
 		}
 	}
