@@ -172,9 +172,9 @@
 	  padding-bottom: 15px;
 	}
 
-	/* ===============================
-	   Game Link List Styling
-	   =============================== */
+		/* ===============================
+		   Game Link List Styling
+		   =============================== */
 	.game-link-list {
 		margin-top: 30px;
 		padding: 20px;
@@ -189,52 +189,78 @@
 		border: 1px solid #ddd;
 		border-radius: 6px;
 		background-color: #fff;
-		display: flex; /* Use flexbox to align elements */
-		align-items: center; /* Vertically align items in the middle */
-		justify-content: space-between; /* Push link to the right */
+		display: flex; 
+		flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+		align-items: center; 
+		/* Removed justify-content: space-between; as it can cause issues with wrapping */
+		gap: 15px; /* Adds space between items in the flex container */
 	}
 
 	.item-title-container {
 		display: flex;
 		align-items: center;
-		flex-grow: 1; /* Allows the title container to take up available space */
+		flex-grow: 1; 
+		flex-basis: 0; /* Allows this item to shrink */
+		min-width: 0; /* Important for allowing text within to shrink if needed */
 	}
 
 	.item-icon {
-		width: 40px; /* Size for the icon image */
+		width: 40px; 
 		height: 40px;
 		margin-right: 15px;
-		/* Optional: give icons a border/style */
 		border-radius: 4px; 
 		object-fit: contain;
+		flex-shrink: 0; /* Prevent icon from shrinking */
 	}
 
 	.game-link-item h3 {
 		margin: 0;
-		color: #333; /* Dark color for title text */
+		color: #333; 
 		font-size: 1.1em;
+		word-break: break-word; /* Allows long words to break if necessary */
+		min-width: 0; /* Allows text to shrink */
 	}
 
 	/* Styling the actual link to look like an action button */
 	.download-link {
-		/* Uses the same color as your accent green #4CAF50 */
 		background-color: #4CAF50;
 		color: white;
-		text-decoration: none; /* Remove underline */
+		text-decoration: none; 
 		padding: 8px 15px;
 		border-radius: 4px;
 		font-weight: bold;
-		white-space: nowrap; /* Prevents text from wrapping */
+		white-space: nowrap; 
 		transition: background-color 0.2s;
+		flex-shrink: 0; /* Prevent the button from shrinking */
+		margin-left: auto; /* Push the link to the far right when space allows */
 	}
 
 	.download-link:hover {
-		background-color: #45a049; /* Darker green on hover */
+		background-color: #45a049; 
 	}
 
 	/* Optional: Description text below the title */
 	.item-description {
-		display: none; /* Hidden by default, you can remove this to show it */
+		display: none; 
+	}
+
+	/* Responsive adjustment for smaller screens */
+	@media (max-width: 600px) {
+		.game-link-item {
+			flex-direction: column; 
+			align-items: flex-start;
+		}
+		.item-title-container {
+			width: 100%; /* Make title container full width */
+			margin-bottom: 10px;
+			flex-basis: auto; /* Reset flex-basis for mobile */
+		}
+		.download-link {
+			width: 100%; 
+			text-align: center;
+			margin-top: 10px;
+			margin-left: 0; /* Remove auto-margin on mobile */
+		}
 	}
 
 	@media (max-width: 600px) {
