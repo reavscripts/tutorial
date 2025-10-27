@@ -1,30 +1,44 @@
-	body {
-		font-family: 'Inter', Arial, sans-serif;
-		line-height: 1.6;
-		width: 100%;
-		min-height: 100vh;
-		margin: 0;
-		padding: 0;
-		background-color: #0d1a26;
-		background-image: url('../Images/background.jpg');
-		background-size: contain; 
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-position: center center;
-		color: #f3f4f6;
-	}
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 
+    /* Set a background color to fill the gaps created by 'contain' */
+    background-color: #0d1a26; /* Dark slate color as a fallback for the bars */
+
+    /* Rules for the image */
+    /* NOTE: I'm using a placeholder image URL for portability.
+       Replace this with your actual image path: url('../Images/background.jpg')
+    */
+    background-image: url('https://placehold.co/1920x1080/0d1a26/ffffff?text=Your+Background+Image');
+    
+    /* --- THE KEY CHANGE IS HERE: 'contain' --- */
+    background-size: contain; 
+    /* ----------------------------------------- */
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    color: #f3f4f6; /* Light text for contrast */
+}
+
+	/* Se vuoi che il contenuto rimanga centrato e leggibile */
 	#contenuto-principale {
 		max-width: 800px;
-		margin: 40px auto;
+		margin: 40px auto; /* Ri-applica il centraggio e il margine qui */
 		padding: 20px;
-		background-color: rgba(255, 255, 255, 0.85);
-		border-radius: 8px; 
+		/* Aggiungi uno sfondo semi-trasparente per migliorare la leggibilità sopra l'immagine */
+		background-color: rgba(255, 255, 255, 0.85); /* Sfondo bianco semi-trasparente */
+		border-radius: 8px; /* Angoli arrotondati per estetica */
 	}
     h1 { color: #333; }
 	.step {
 		margin-bottom: 20px;
 		padding: 15px;
+		/* BLU cambiato in VERDE (accento 1) */
 		border-left: 5px solid #4CAF50; 
 		background-color: #f6f8fa;
 		overflow: auto;
