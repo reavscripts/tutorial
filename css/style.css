@@ -1,34 +1,30 @@
 	body {
-		font-family: Arial, sans-serif;
+		font-family: 'Inter', Arial, sans-serif;
 		line-height: 1.6;
-		/* Rimuoviamo le vecchie regole di max-width e margin per il centraggio */
-		width: 100%; 
-		min-height: 100vh; 
-		margin: 0; /* Rimuove i margini predefiniti del browser */
-		padding: 0; /* Rimuove i padding predefiniti del browser */
-
-		/* Regole di sfondo */
-		background-image: url('../Images/background.jpg'); 
-		background-repeat: no-repeat; 
-		background-size: cover; 
-		background-attachment: fixed; 
-		background-position: center center; 
+		width: 100%;
+		min-height: 100vh;
+		margin: 0;
+		padding: 0;
+		background-color: #0d1a26;
+		background-image: url('../Images/background.jpg');
+		background-size: contain; 
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center center;
+		color: #f3f4f6;
 	}
 
-	/* Se vuoi che il contenuto rimanga centrato e leggibile */
 	#contenuto-principale {
 		max-width: 800px;
-		margin: 40px auto; /* Ri-applica il centraggio e il margine qui */
+		margin: 40px auto;
 		padding: 20px;
-		/* Aggiungi uno sfondo semi-trasparente per migliorare la leggibilità sopra l'immagine */
-		background-color: rgba(255, 255, 255, 0.85); /* Sfondo bianco semi-trasparente */
-		border-radius: 8px; /* Angoli arrotondati per estetica */
+		background-color: rgba(255, 255, 255, 0.85);
+		border-radius: 8px; 
 	}
     h1 { color: #333; }
 	.step {
 		margin-bottom: 20px;
 		padding: 15px;
-		/* BLU cambiato in VERDE (accento 1) */
 		border-left: 5px solid #4CAF50; 
 		background-color: #f6f8fa;
 		overflow: auto;
