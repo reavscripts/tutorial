@@ -1,29 +1,19 @@
-body {
-    font-family: 'Inter', Arial, sans-serif;
-    line-height: 1.6;
-    width: 100%;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
+	body {
+		font-family: Arial, sans-serif;
+		line-height: 1.6;
+		/* Rimuoviamo le vecchie regole di max-width e margin per il centraggio */
+		width: 100%; 
+		min-height: 100vh; 
+		margin: 0; /* Rimuove i margini predefiniti del browser */
+		padding: 0; /* Rimuove i padding predefiniti del browser */
 
-    /* Set a background color to fill the gaps created by 'contain' */
-    background-color: #0d1a26; /* Dark slate color as a fallback for the bars */
-
-    /* Rules for the image */
-    /* NOTE: I'm using a placeholder image URL for portability.
-       Replace this with your actual image path: url('../Images/background.jpg')
-    */
-    background-image: url('https://placehold.co/1920x1080/0d1a26/ffffff?text=Your+Background+Image');
-    
-    /* --- THE KEY CHANGE IS HERE: 'contain' --- */
-    background-size: contain; 
-    /* ----------------------------------------- */
-    
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    color: #f3f4f6; /* Light text for contrast */
-}
+		/* Regole di sfondo */
+		background-image: url('../Images/background.jpg'); 
+		background-repeat: no-repeat; 
+		background-size: cover; 
+		background-attachment: fixed; 
+		background-position: center center; 
+	}
 
 	/* Se vuoi che il contenuto rimanga centrato e leggibile */
 	#contenuto-principale {
