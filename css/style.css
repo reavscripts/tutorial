@@ -84,10 +84,12 @@ code {
 .tab-container {
     display: flex;
     margin-bottom: -1px;
-    /* width: 100%;  rimosso per adattarsi alla larghezza contenuto */
-    gap: 10px; /* spazio tra i pulsanti */
-    justify-content: center; /* centra i bottoni */
-    flex-wrap: wrap; /* per schermi piccoli i bottoni vanno a capo */
+    justify-content: center;
+    gap: 10px;
+    overflow-x: auto;  /* abilita scroll orizzontale su schermi piccoli */
+    -webkit-overflow-scrolling: touch; /* per scroll fluido su iOS */
+    min-width: 300px; /* dimensione minima per evitare troppe compressioni, regola a piacere */
+    white-space: nowrap; /* per evitare a capo sui tab */
 }
 
 .tab-button {
@@ -281,21 +283,14 @@ code {
     }
 
     .tab-container {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-bottom: 10px;
-        width: 100%;
         gap: 8px;
+        min-width: unset; /* rimuove min-width su mobile se vuoi */
+        justify-content: flex-start; /* allinea a sinistra nel caso di scroll */
+        overflow-x: auto;
     }
-
+    
     .tab-button {
-        width: auto;
-        margin-right: 0;
-        margin-bottom: 5px;
-        border-radius: 5px;
-        font-size: 14px;
-        padding: 8px 12px;
+        white-space: nowrap; /* evita wrapping bottone */
     }
 
     .step img,
