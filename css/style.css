@@ -97,14 +97,19 @@ code {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    margin-right: 0; /* margin-right rimosso per gap funzionante */
-    font-size: 16px;
+    margin-right: 0;
+    font-size: 14px; /* Valore ridotto come esempio */
     border-radius: 5px 5px 0 0;
     transition: background-color 0.3s;
     min-width: 0;
-    text-align: center;
+    
+    /* MODIFICHE PER CENTRATURA PERFETTA */
+    display: flex; /* Trasforma in contenitore flex */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra orizzontalmente */
+
+    text-align: center; /* Può essere mantenuto ma è meno essenziale con justify-content: center */
     white-space: nowrap;
-    display: block;
     outline-offset: 2px;
 }
 
@@ -289,8 +294,10 @@ code {
 	    overflow-x: auto; /* Abilita lo scroll SOLO su schermi piccoli */
 	  }
     
-    .tab-button {
-        white-space: nowrap; /* evita wrapping bottone */
+	.tab-button {
+        white-space: nowrap; 
+        /* Rivedi il padding qui se necessario per schermi più piccoli, ad esempio: */
+        padding: 8px 15px; 
     }
 
     .step img,
