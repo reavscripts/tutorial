@@ -82,14 +82,14 @@ code {
 }
 
 .tab-container {
-    display: flex;
-    margin-bottom: -1px;
-    justify-content: center;
-    gap: 10px;
-    overflow-x: auto;  /* abilita scroll orizzontale su schermi piccoli */
-    -webkit-overflow-scrolling: touch; /* per scroll fluido su iOS */
-    min-width: 300px; /* dimensione minima per evitare troppe compressioni, regola a piacere */
-    white-space: nowrap; /* per evitare a capo sui tab */
+  display: flex;
+  margin-bottom: -1px;
+  justify-content: center;
+  gap: 10px;
+  /* RIMUOVI: overflow-x: auto; */
+  -webkit-overflow-scrolling: touch; 
+  min-width: 300px;
+  white-space: nowrap;
 }
 
 .tab-button {
@@ -282,12 +282,12 @@ code {
         box-sizing: border-box;
     }
 
-    .tab-container {
-        gap: 8px;
-        min-width: unset; /* rimuove min-width su mobile se vuoi */
-        justify-content: flex-start; /* allinea a sinistra nel caso di scroll */
-        overflow-x: auto;
-    }
+	.tab-container {
+	    gap: 8px;
+	    min-width: unset;
+	    justify-content: flex-start; /* Allinea a sinistra */
+	    overflow-x: auto; /* Abilita lo scroll SOLO su schermi piccoli */
+	  }
     
     .tab-button {
         white-space: nowrap; /* evita wrapping bottone */
