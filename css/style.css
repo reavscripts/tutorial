@@ -271,6 +271,63 @@ code {
     line-height: 1;
 }
 
+.tutorial-dropdown {
+            width: 80%;
+            max-width: 600px;
+            margin: 50px auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden; /* Assicura che i bordi arrotondati funzionino bene */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Stile per l'intestazione del dropdown (summary) */
+        .tutorial-dropdown summary {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            outline: none; /* Rimuove l'evidenziazione blu al focus su alcuni browser */
+            font-weight: bold;
+            display: flex; /* Permette il posizionamento dell'icona */
+            justify-content: space-between;
+            align-items: center;
+            user-select: none; /* Impedisce la selezione del testo nell'intestazione */
+            list-style: none; /* Rimuove il triangolino di default in alcuni browser */
+        }
+        /* Aggiunge un triangolino per simulare l'icona del dropdown/accordion */
+        .tutorial-dropdown summary::after {
+            content: '▼'; /* Triangolo verso il basso */
+            transition: transform 0.3s ease;
+        }
+        /* Ruota il triangolo quando il dropdown è aperto */
+        .tutorial-dropdown[open] summary::after {
+            content: '▲'; /* Triangolo verso l'alto */
+        }
+
+        /* Stile per il contenuto del tutorial */
+        .tutorial-content {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #eee;
+        }
+
+        .tutorial-content h3 {
+            color: #333;
+            margin-top: 0;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+
+        .tutorial-content ol {
+            padding-left: 20px;
+        }
+
+        .tutorial-content li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
 @media (max-width: 600px) {
     body {
         max-width: none;
