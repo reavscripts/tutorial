@@ -1,3 +1,4 @@
+/* --- Global & Body Styles --- */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -11,6 +12,8 @@ body {
     background-attachment: fixed;
     background-position: center center;
     box-sizing: border-box;
+    /* FIX: Added padding-bottom to ensure the main content and footer clear the fixed visitor counter */
+    padding-bottom: 70px;
 }
 
 #contenuto-principale {
@@ -19,8 +22,7 @@ body {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.85);
     border-radius: 8px;
-    /* FIX: Added padding-bottom to ensure the footer content clears the fixed visitor counter */
-    padding-bottom: 50px; 
+    /* FIX: Removed the conflicting padding-bottom for #contenuto-principale */
 }
 
 h1 {
@@ -33,6 +35,7 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* --- Step Content Styles --- */
 .step {
     margin-bottom: 20px;
     padding: 15px;
@@ -75,6 +78,7 @@ code {
     margin-top: 10px;
 }
 
+/* --- Tab Navigation Styles (Crucial for Responsiveness) --- */
 .tab-wrapper {
     display: flex;
     justify-content: center;
@@ -84,12 +88,14 @@ code {
 
 .tab-container {
     display: flex;
+    justify-content: flex-start; /* FIX: Align tabs to the start for mobile scroll */
     margin-bottom: -1px;
-    justify-content: center;
     gap: 10px;
+    overflow-x: auto; /* FIX: Allows horizontal scrolling on small screens */
     -webkit-overflow-scrolling: touch; 
     min-width: 300px;
     white-space: nowrap;
+    padding-bottom: 5px; /* Adds a bit of space for the scroll indicator */
 }
 
 .tab-button {
@@ -110,6 +116,7 @@ code {
     text-align: center;
     white-space: nowrap;
     outline-offset: 2px;
+    flex-shrink: 0; /* Prevents buttons from shrinking on small screens */
 }
 
 .tab-button:hover {
@@ -137,6 +144,7 @@ code {
     display: none;
 }
 
+/* --- Logo & Button Styles --- */
 .header-logo-container {
     width: 100%;
     text-align: center;
@@ -195,6 +203,7 @@ code {
     outline: 2px solid #1B5E20;
 }
 
+/* --- Download List Styles --- */
 .game-link-list {
     margin-top: 30px;
     padding: 20px;
@@ -265,6 +274,17 @@ code {
     display: none;
 }
 
+/* --- Footer & Fixed Counter Styles --- */
+/* NEW FIX: Style for the footer (now outside #contenuto-principale) */
+footer {
+    height: 40px; /* Set a fixed height */
+    padding: 5px 0;
+    width: 100%;
+    /* Optional background for visual separation */
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 20px;
+}
+
 .visitor-counter-container {
     position: fixed;
     bottom: 15px;
@@ -277,19 +297,18 @@ code {
     line-height: 1;
 }
 
+/* --- Tutorial Dropdown Styles --- */
 .tutorial-dropdown {
     width: 80%;
     max-width: 600px;
     margin: 50px auto;
-    border: 1px solid #ccc; /* Usiamo un bordo neutro coerente */
+    border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
     font-family: Arial, sans-serif;
 }
 
-/* Stile per l'intestazione del dropdown (summary) */
 .tutorial-dropdown summary {
-    /* Utilizziamo il verde primario del tuo .game-action-button */
     background-color: #4CAF50;
     color: white;
     padding: 15px 20px;
@@ -300,37 +319,32 @@ code {
     justify-content: space-between;
     align-items: center;
     user-select: none;
-    list-style: none; /* Rimuove il triangolino di default */
+    list-style: none;
     transition: background-color 0.2s;
 }
 
 .tutorial-dropdown summary:hover {
-    /* Utilizziamo il verde chiaro del tuo hover button */
     background-color: #66BB6A;
 }
 
-/* Aggiunge un triangolino per simulare l'icona del dropdown/accordion */
 .tutorial-dropdown summary::after {
-    content: '▼'; /* Triangolo verso il basso */
+    content: '▼';
     transition: transform 0.3s ease;
 }
-/* Ruota il triangolo quando il dropdown è aperto */
+
 .tutorial-dropdown[open] summary::after {
-    content: '▲'; /* Triangolo verso l'alto */
+    content: '▲';
 }
 
-/* Stile per il contenuto del tutorial - Simile a .step o .game-link-list */
 .tutorial-content {
-    /* Sfondo leggermente grigio come .step, ma senza il bordo colorato a sinistra */
     padding: 20px;
-    background-color: #f6f8fa; /* Sfondo simile a .step */
+    background-color: #f6f8fa;
     border-top: 1px solid #eee;
 }
 
 .tutorial-content h3 {
     color: #333;
     margin-top: 0;
-    /* Utilizziamo il verde primario #4CAF50 per il bordo di separazione */
     border-bottom: 2px solid #4CAF50;
     padding-bottom: 5px;
 }
@@ -341,61 +355,79 @@ code {
 
 .tutorial-content li {
     margin-bottom: 10px;
-    line-height: 1.6; /* Coerente con body */
+    line-height: 1.6;
 }
 
+/* ================================================= */
+/* RESPONSIVENESS MEDIA QUERIES            */
+/* ================================================= */
+
+/* Adjustment for medium screens (e.g., small tablets/desktops) */
+@media (max-width: 800px) {
+    #contenuto-principale {
+        max-width: 95%; /* Use almost full width */
+        margin: 20px auto; /* Reduce top/bottom margin */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .tutorial-dropdown {
+        width: 95%;
+        margin: 30px auto;
+    }
+}
+
+/* Mobile-Specific Adjustments (Phones) */
 @media (max-width: 600px) {
-    body {
-        max-width: none;
-        width: 100%;
-        margin: 10px 0;
-        padding: 0 10px;
-    }
-
-    .tab-wrapper {
-        padding: 0 10px;
-        box-sizing: border-box;
-    }
-
-    .tab-container {
-        gap: 8px;
-        min-width: unset;
-        justify-content: flex-start;
-        overflow-x: auto;
+    h1 {
+        font-size: 1.5em; /* Smaller headings on mobile */
     }
     
+    .tab-container {
+        gap: 5px; /* Reduce space between tabs further */
+    }
+
     .tab-button {
-        white-space: nowrap;
-        padding: 8px 15px;
+        padding: 8px 12px; /* Reduce button padding */
+        font-size: 12px; /* Smaller font size */
     }
 
+    .step {
+        padding: 10px; /* Smaller step padding */
+    }
+
+    /* Stack images vertically and make them full width on mobile */
     .step img,
-    .large-image,
     .image-container {
-        float: none !important;
         max-width: 100% !important;
-        width: 100%;
-        height: auto;
-        margin: 10px 0 10px 0 !important;
+        float: none !important;
         display: block;
+        margin: 15px auto !important;
     }
 
-    .image-container {
-        text-align: center;
-    }
-
+    /* Stack download items vertically */
     .game-link-item {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
+        gap: 10px;
+        padding: 10px;
     }
 
     .item-title-container {
-        width: 100%;
-        margin-bottom: 10px;
-        flex-basis: auto;
+        order: 1; 
+        min-width: 100%;
+        text-align: center;
     }
 
     .download-link {
-        display: block;
-        width: auto;
-        max-
+        order: 2;
+        margin-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .visitor-counter-container {
+        bottom: 5px;
+        right: 5px;
+        padding: 3px 8px;
+    }
+}
