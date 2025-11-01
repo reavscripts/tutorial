@@ -19,7 +19,8 @@ body {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.85);
     border-radius: 8px;
-	padding-bottom: 50px;
+    /* FIX: Added padding-bottom to ensure the footer content clears the fixed visitor counter */
+    padding-bottom: 50px; 
 }
 
 h1 {
@@ -256,6 +257,10 @@ code {
     background-color: #45a049;
 }
 
+.download-link:active {
+    background-color: #388E3C;
+}
+
 .item-description {
     display: none;
 }
@@ -393,37 +398,4 @@ code {
     .download-link {
         display: block;
         width: auto;
-        max-width: 200px;
-        text-align: center;
-        margin: 10px auto 0 auto;
-        flex-shrink: 0;
-    }
-
-    .visitor-counter-container {
-        bottom: 5px;
-        right: 5px;
-        font-size: 0.8em;
-    }
-	.tutorial-dropdown {
-        width: 100%; /* Occupa tutta la larghezza disponibile */
-        max-width: none; /* Rimuove il limite massimo di 600px per lasciare spazio */
-        /* Utilizziamo i margini laterali per dare un po' di respiro */
-        margin: 20px 0; /* Margine superiore/inferiore minore e margini laterali zero */
-        border-radius: 0; /* Opzionale: Rimuove i bordi arrotondati per un look "full-width" */
-        border-left: none; /* Rimuovi i bordi laterali per la coerenza con il layout mobile */
-        border-right: none;
-    }
-
-    .tutorial-dropdown summary {
-        padding: 12px 15px; /* Riduci il padding per schermi più piccoli */
-        font-size: 1em;
-    }
-
-    .tutorial-content {
-        padding: 15px; /* Riduci il padding interno */
-    }
-
-    .tutorial-content li {
-        margin-bottom: 8px; /* Riduci leggermente i margini tra gli elementi della lista */
-    }
-}
+        max-
