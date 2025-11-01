@@ -378,7 +378,8 @@ code {
 
     .game-link-item {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center; /* center content visually */
+        text-align: center;
     }
 
     .item-icon {
@@ -386,16 +387,25 @@ code {
         margin-bottom: 10px;
     }
 
+    /* ✅ Fix download link sizing */
     .download-link {
-        width: 100%;
+        display: inline-block;
+        width: auto;              /* no full width */
+        max-width: 90%;           /* limit to 90% of container */
         text-align: center;
-        margin: 10px 0 0;
+        margin: 10px auto 0;      /* center horizontally */
+        font-size: 15px;
+        padding: 8px 20px;        /* consistent padding */
     }
 
     .game-action-button {
-        width: 100%;
+        width: auto;
+        min-width: 180px;
+        max-width: 90%;
         font-size: 18px;
         padding: 12px;
+        margin: 10px auto;
+        display: block;
     }
 
     .visitor-counter-container {
@@ -428,7 +438,17 @@ code {
         margin: 30px auto;
     }
 
+    /* ✅ Keep small download buttons compact on phones */
+    .download-link {
+        width: auto;
+        max-width: 85%;
+        font-size: 14px;
+        padding: 7px 16px;
+    }
+
     .game-action-button {
+        width: auto;
+        max-width: 85%;
         font-size: 16px;
         padding: 10px;
     }
